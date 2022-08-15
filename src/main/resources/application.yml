@@ -1,0 +1,10 @@
+server:
+  port: 8888
+
+spring:
+  data:
+    mongodb:
+      uri: "mongodb://root:MiPas1w0rd@localhost:27017/test?authSource=admin"
+  mvc:
+    pathmatch:
+      matching-strategy: 'ant-path-matcher'

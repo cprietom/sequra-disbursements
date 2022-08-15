@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mimongo-disbursements
+    restart: unless-stopped
+    env_file:
+      - config/.env-local.env
+    ports:
+      - "27017:27017"
+    networks:
+      - mongodb_network
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+  disbursements:
+    image: sequra/disbursements
+    container_name: disbursements
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: java -jar app.jar
+    ports:
+      - ${EXTERNAL_PORT}:${INTERNAL_PORT}
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+
+networks:
+  mongodb_network:
+    name: mongodb_network
