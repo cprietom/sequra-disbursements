@@ -18,6 +18,7 @@ This project provides a possible solution to https://gist.github.com/francesc/33
 - Add the collections to the mongodb database.
 - Run `java -jar build/libs/disbursements-1.0-SNAPSHOT.jar`
 
+## HOWTO USE THE SERVICE
 - Access the swagger docs here: http://localhost:8888/swagger-ui
 - Provided endpoints:
   - GET `http://localhost:8888/v1/disbursements?week=1&year=2018`
