@@ -25,11 +25,10 @@ This project provides a possible solution to https://gist.github.com/francesc/33
   - POST http://localhost:8888/v1/disbursements/2022/33
     - Calculates and persists the disbursements per merchant on a given week
 
-
 # NOTES
 ## Architecture
 Hexagonal architecture has been applied. It's the most flexible for these kind of projects
-that can grow really big. Besides, it allows to test the business logic without knowing any
+that can grow huge. Besides, it allows me to test the business logic without knowing any
 details about the infrastructure.
 
 ## Use cases

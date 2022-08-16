@@ -16,7 +16,6 @@ public class Order {
     private ObjectId id;
     private String merchantId; // TODO: Should beof type  Merchant
     private String shopperId; // TODO: Should be of type Shopper
-    private StatusType status;
     private Date createdAt;
     private Date completedAt;
     private Double price;

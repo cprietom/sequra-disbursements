@@ -16,7 +16,7 @@ import java.util.Date;
 @Getter
 @Setter
 @AllArgsConstructor
-class DateRange {
+public class DateRange {
     private Date initDate;
     private Date endDate;
 
